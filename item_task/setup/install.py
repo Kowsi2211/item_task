@@ -4,6 +4,12 @@ def before_install():
     if not frappe.db.exists("Item Group", "Consumable"):
         frappe.get_doc({
             "doctype": "Item Group",
+            "item_group_name": "All Item Groups",
+            "is_group": 1,
+        }).insert(ignore_permissions=True)
+
+        frappe.get_doc({
+            "doctype": "Item Group",
             "item_group_name": "Consumable",
             "is_group": 0,
             "parent_item_group": "All Item Groups"
