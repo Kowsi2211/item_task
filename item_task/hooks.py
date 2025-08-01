@@ -242,4 +242,4 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
-before_install = "app.setup.install.before_install" 
+before_install = "item_task.setup.install.before_install" 
